@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: process-order-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/digital
+    username: digital
+    password: digital@2024
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+
+#okta:
+#  oauth2:
+#    issuer: "https://dev-89350320-admin.okta.com/oauth2/default"
+#    clientId: "0oajcw4sydYBVI3sv5d7"
+#    clientSecret: "B_wfN1fsVgdTHQbGIUAerBa2XPkt_deHUDgvh7fD6pjdPNibTQm-uEO7BcszM3U1"
+#    postLogoutRedirectUri: "http://localhost:8080/logout/callback"
